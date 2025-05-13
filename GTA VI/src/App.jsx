@@ -8,7 +8,7 @@ const App = () => {
   const [showing, setShowing] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const images=["https://c4.wallpaperflare.com/wallpaper/586/507/755/gta-5-gta-v-games-4k-wallpaper-preview.jpg",
+  const images = [
     "https://oyster.ignimgs.com/mediawiki/apis.ign.com/grand-theft-auto-5/5/59/GTAO_072222.jpg?width=1280",
     "https://wallpapercat.com/w/full/f/e/c/2475-1920x1080-desktop-1080p-grand-theft-auto-5-background-image.jpg",
   ];
@@ -154,23 +154,31 @@ const App = () => {
                 src="./bg.png"
                 alt=""
               />
-              <div className="text scale-[1.3] rotate-[-10deg] text-white absolute flex flex-col gap-4 left-1/2 -translate-x-1/2 top-76 -translate-y-1/2">
-                <h1 className="text-[10rem] leading-none -ml-40">grand</h1>
-                <h1 className="text-[10rem] leading-none ml-20">theft</h1>
-                <h1 className="text-[10rem] leading-none -ml-40">auto</h1>
+              <div className="text scale-[1.3] rotate-[-10deg] text-white absolute flex flex-col gap-4 left-1/2 -translate-x-1/2 md:top-76 top-[25rem] -translate-y-1/2">
+                <h1 className="md:text-[10rem] text-[11rem] leading-none md:-ml-40 ">
+                  grand
+                </h1>
+                <h1 className="md:text-[10rem] text-[10rem] leading-none md:ml-20">
+                  theft
+                </h1>
+                <h1 className="md:text-[10rem] text-[7rem] leading-none md:-ml-40  ">
+                  auto
+                </h1>
               </div>
               <img
-                className="absolute girl left-1/2 -bottom-[150%] -translate-x-1/2 scale-[3] rotate-[-20deg] "
+                className="absolute girl md:left-[72%] md:-translate-y-1/2 left-[50%]  md:-bottom-[100%] bottom-[80%] md:w-[40rem] w-[90rem]  md:-translate-x-1/2  rotate-[-20deg] "
                 src="./girlbg.png"
                 alt=""
               />
             </div>
             <div className="bottombar text-white bg-gradient-to-t from-black to-transparent  w-full py-10 px-10 absolute left-0 bottom-0">
-              <div className="flex items-center gap-4">
-                <IoIosArrowRoundDown className="text-[40px]" />
-                <h3 className="font-[Helvetica_Now_Display] text-2xl">
-                  Scroll Down
-                </h3>
+              <div className="hidden md:block">
+                <div className="flex items-center gap-4">
+                  <IoIosArrowRoundDown className="text-[40px]" />
+                  <h3 className="font-[Helvetica_Now_Display] text-2xl">
+                    Scroll Down
+                  </h3>
+                </div>
               </div>
               <img
                 className="absolute h-[57px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -179,60 +187,86 @@ const App = () => {
               />
             </div>
           </div>
-          <div className="w-full h-screen flex items-center justify-center bg-black">
-            <div className="cntt flex text-white w-full h-[80%] ">
-              <div className="left relative w-1/2 h-full">
+          <div className="w-full min-h-screen bg-black">
+            <div className="flex flex-col md:flex-row text-white w-full h-full">
+              {/* Left Section */}
+              <div className="relative mt-9 md:mt-0 w-full md:w-1/2 h-[300px] md:h-auto flex items-center justify-center p-6">
                 <img
-                  className="absolute scale-[1] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                  className="w-[70%] md:w-[78%] max-w-[400px] object-contain"
                   src="./imag.png"
-                  alt=""
+                  alt="Illustration"
                 />
               </div>
-              <div className="right w-[30%]">
-                <h1 className="text-7xl">Still Running,</h1>
-                <h1 className="text-7xl">Not Hunting</h1>
-                <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+
+              {/* Right Section */}
+              <div className="w-full md:w-1/2 px-6 md:px-28 py-10 md:py-16 flex flex-col justify-center">
+                <h1 className="text-5xl md:text-6xl text-center md:text-left font-bold leading-tight">
+                  Still Running,
+                </h1>
+                <h1 className="text-5xl md:text-6xl text-center md:text-left font-bold leading-tight mb-6">
+                  Not Hunting
+                </h1>
+
+                <p className="text-2xl pl-3 md:text-xl font-[Helvetica_Now_Display] mb-4">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                   Distinctio possimus, asperiores nam, omnis inventore nesciunt
                   a architecto eveniet saepe, ducimus necessitatibus at
                   voluptate.
                 </p>
-                <p className="mt-3 text-xl font-[Helvetica_Now_Display]">
+                <p className="text-2xl pl-3 md:text-xl font-[Helvetica_Now_Display] mb-4">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                   eius illum fugit eligendi nesciunt quia similique velit
                   excepturi soluta tenetur illo repellat consectetur laborum
                   eveniet eaque, dicta, hic quisquam? Ex cupiditate ipsa nostrum
                   autem sapiente.
                 </p>
-                <p className="mt-10 text-xl font-[Helvetica_Now_Display]">
+                <p className="text-2xl pl-3 md:text-xl font-[Helvetica_Now_Display] mb-6">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. At
                   eius illum fugit eligendi nesciunt quia similique velit
                   excepturi soluta tenetur illo repellat consectetur laborum
                   eveniet eaque, dicta, hic quisquam? Ex cupiditate ipsa nostrum
                   autem sapiente.
                 </p>
-                <button className="bg-yellow-500 px-7 py-7 text-black mt-7 text-4xl hover:bg-white hover:text-black cursor-pointer transition-all duration-300 rounded-sm">
+
+                <button className="bg-yellow-500 px-12 py-7 text-black text-2xl md:text-2xl hover:bg-white hover:text-black transition-all duration-300 rounded-sm self-center md:self-start">
                   Download Now
                 </button>
               </div>
             </div>
           </div>
-          <div className="imagslider bg-black pb-5 w-full h-screen flex flex-col items-center justify-center">
-            <h1 className="text-white -mt-7 text-7xl">Gallery</h1>
-                        <div className="slider relative pt-5 w-[80%] h-full">
+
+          <div className="imagslider bg-black w-full h-[60vh] md:h-screen flex flex-col items-center justify-center p-5 md:pb-5">
+            {/* Title */}
+            <h1 className="text-white text-7xl md:text-7xl mb-5 md:mb-10">
+              Gallery
+            </h1>
+
+            {/* Image Slider */}
+            <div className="slider relative w-full md:w-[80%] h-[70%] md:h-full flex items-center justify-center overflow-hidden">
               {images.map((image, index) => (
                 <img
                   key={index}
                   src={image}
                   alt={`Slide ${index + 1}`}
-                  className={`absolute w-full rounded-sm h-full object-cover  transition-opacity duration-1000 ${
+                  className={`absolute w-full h-full object-cover rounded-sm transition-opacity duration-1000 ease-in-out ${
                     index === currentSlide ? "opacity-100" : "opacity-0"
                   }`}
                 />
               ))}
             </div>
           </div>
-          <div className="footer bg-black w-full h-screen"></div>
+
+          <div className="characters bg-black py-8 w-full h-screen">
+            <h1 className="text-5xl text-white text-center md:pb-5 pb-6">Characters</h1>
+            <div className="json w-full h-full flex flex-col md:flex-row ">
+              <div className="jsonleft bg-sky-200 w-full md:w-1/2 h-full "></div>
+              <div className="jsonright bg-gray-400 w-full md:w-1/2 h-full"></div>
+            </div>
+            <div className="maya w-full h-full flex flex-col md:flex-row ">
+              <div className="mayaleft bg-sky-600 w-full md:w-1/2 h-full "></div>
+              <div className="mayaright bg-gray-600 w-full md:w-1/2 h-full"></div>
+            </div>
+          </div>
         </div>
       )}
     </>
